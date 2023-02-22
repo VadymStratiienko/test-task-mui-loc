@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { CircularProgress, CssBaseline } from '@mui/material';
+
+import Layout from './Component/Layout';
+import HomePage from './Page/HomePage';
+import NewsPage from './Page/NewsPage';
+import PrivateRoute from './utils/router/privateRouter';
+import ProfilePage from './Page/ProfilePage';
+import AuthComponent from './Page/Auth';
+import { useStyles } from './Component/Home/styles';
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense
+      fallback={
+        <>
+          <CircularProgress disableShrink className={classes.loadingStyle} />
+        </>
+      }
+    >
+      <CssBaseline />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path='/' element={<HomePage />} />
+          <Route path='news' element={<NewsPage />} />
+          <Route element={<PrivateRoute />}>
+            <Route path='profile' element={<ProfilePage />} />
+          </Route>
+          <Route path='login' element={<AuthComponent />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 

@@ -1,0 +1,24 @@
+{
+  "language": "Змінити мову",
+  "ukrainian": "Українська",
+
+  "header": {
+    "home": "Головна",
+    "news": "Новини",
+    "login": "Вхід"
+  },
+  "form": {
+    "invalid": "Не вірний username чи password.",
+    "logHeader": "Авторизація",
+    "logBtn": "Вхід"
+  },
+  "profile": {
+    "EditProfile": "Профіль користувача",
+    "saveBtn": "ЗБЕРЕГТИ ЗМІНИ",
+    "changeBtn": "ЗМІНИТИ АВАТАР"
+  },
+  "post": {
+    "add": "Додати пости",
+    "del": "Видалити"
+  }
+}

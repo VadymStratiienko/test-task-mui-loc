@@ -1,0 +1,24 @@
+{
+  "language": "Change language",
+  "English": "English",
+
+  "header": {
+    "home": "Home",
+    "news": "News",
+    "login": "Login"
+  },
+  "validation": {
+    "invalid": "Invalid username or password",
+    "logHeader": "Login",
+    "logBtn": "login"
+  },
+  "profile": {
+    "EditProfile": "Edit Profile",
+    "saveBtn": "SAVE CHANGES",
+    "changeBtn": "CHANGE AVATAR"
+  },
+  "post": {
+    "add": "Add posts",
+    "del": "delete"
+  }
+}
