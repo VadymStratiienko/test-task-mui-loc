@@ -82,7 +82,7 @@ function TopBar() {
             ) : (
               <Link to='login'>
                 <Typography variant='subtitle1' style={{ color: 'white' }}>
-                  Login
+                  {t('header.login')}
                 </Typography>
               </Link>
             )}
