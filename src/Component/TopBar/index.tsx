@@ -31,7 +31,7 @@ function TopBar() {
   };
 
   return (
-    <AppBar position='fixed' className={classes.appBar}>
+    <AppBar position='fixed'>
       <Container maxWidth='xl'>
         <Toolbar>
           <Typography variant='h6' className={classes.title}>

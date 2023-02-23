@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Box, TextField, Typography } from '@material-ui/core';
+import { Box, TextField, Typography } from '@mui/material';
 import { IPropsLogin } from '../../../common/types/auth';
 import { useStyles } from './styles';
 import AppLoadingButton from '../../../Component/loading-button';

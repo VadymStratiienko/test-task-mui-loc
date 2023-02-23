@@ -27,13 +27,13 @@ const NewsComponent: FC = (): JSX.Element => {
     <>{isLoading && <CircularProgress disableShrink className={classes.loadingStyle} />}</>
   ) : (
     <Box className={classes.wrapperNews}>
-      {data?.map((post) => {
+      {data?.map(({title, body, id}, index) => {
         return (
           <PostCard
-            key={post.id}
-            id={post.id}
-            title={post.title}
-            body={post.body}
+            key={index}
+            id={id}
+            title={title}
+            body={body}
             loading={isLoading}
             handleDeletePost={handleDeletePost}
           />

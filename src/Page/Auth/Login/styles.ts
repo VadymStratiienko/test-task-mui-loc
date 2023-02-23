@@ -1,6 +1,6 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/styles';
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -13,12 +13,12 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: theme.spacing(2),
+    marginTop: '10px',
   },
   textField: {
-    margin: theme.spacing(1),
+    margin: '10px',
   },
   button: {
-    margin: theme.spacing(2),
+    margin: '40px',
   },
 }));
