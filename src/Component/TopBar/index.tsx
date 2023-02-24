@@ -70,7 +70,7 @@ function TopBar() {
                 }}
               >
                 <option value='en'>{t('English')}</option>
-                <option value='ua'>{t('ukrainian')}</option>
+                <option value='ua'>{t('Ukrainian')}</option>
               </NativeSelect>
             </FormControl>
           </Box>
