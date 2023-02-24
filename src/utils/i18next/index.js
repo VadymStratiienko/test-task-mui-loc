@@ -10,8 +10,8 @@ i18n
   .init({
     fallbackLng: 'ua',
     detection: {
-      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
-      caches: ['cookie'],
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
     },
     interpolation: {
       escapeValue: false,
