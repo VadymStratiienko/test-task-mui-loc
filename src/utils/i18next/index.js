@@ -23,9 +23,5 @@ i18n
     },
   });
 
-i18n.addResourceBundle('en', 'translation', {});
-i18n.loadLanguages(['en', 'ua']);
-i18n.addResourceBundle('ua', 'translation', {});
-i18n.loadLanguages(['ua']);
 
 export default i18n;
