@@ -21,7 +21,7 @@ const PostCard: FC<IPostCard> = (props) => {
       >
         {t('post.del')}
       </AppLoadingButton>
-      <CardContent >
+      <CardContent>
         <Typography className={classes.title} color='textSecondary' fontWeight={700} gutterBottom>
           {title[0].toUpperCase() + title.substring(1)}
         </Typography>

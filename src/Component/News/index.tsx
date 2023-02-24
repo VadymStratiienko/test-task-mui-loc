@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../utils/hook';
-import {  deleteNewsById } from '../../store/thank/post';
+import { deleteNewsById } from '../../store/thank/post';
 import { Box, Button, CircularProgress } from '@mui/material';
 import { useStyles } from './styles';
 import PostCard from './Posts';
@@ -27,7 +27,7 @@ const NewsComponent: FC = (): JSX.Element => {
     <>{isLoading && <CircularProgress disableShrink className={classes.loadingStyle} />}</>
   ) : (
     <Box className={classes.wrapperNews}>
-      {data?.map(({title, body, id}, index) => {
+      {data?.map(({ title, body, id }, index) => {
         return (
           <PostCard
             key={index}

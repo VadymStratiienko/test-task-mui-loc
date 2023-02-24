@@ -10,6 +10,7 @@ const LoginPage: FC<IPropsLogin> = (props): JSX.Element => {
   const { setUsername, setPassword, handleLogin, password, username, isValid, loading } = props;
   const classes = useStyles();
   const { t } = useTranslation();
+
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
   };

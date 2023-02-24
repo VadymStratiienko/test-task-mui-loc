@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import {  IPostState } from '../../../common/types/post';
+import { IPostState } from '../../../common/types/post';
 import { deleteNewsById, getNews } from '../../thank/post';
 import { AppThunk } from '../../store';
 

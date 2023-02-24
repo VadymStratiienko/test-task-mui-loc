@@ -1,10 +1,8 @@
 import { makeStyles } from '@material-ui/styles';
 
 export const useStyles = makeStyles(() => ({
-
   menuButton: {
-      display: 'none',
-
+    display: 'none',
   },
   title: {
     flexGrow: 1,

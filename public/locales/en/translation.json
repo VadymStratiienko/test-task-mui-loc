@@ -7,10 +7,10 @@
     "news": "News",
     "login": "Login"
   },
-  "validation": {
+  "form": {
     "invalid": "Invalid username or password",
     "logHeader": "Login",
-    "logBtn": "login"
+    "logBtn": "Login"
   },
   "profile": {
     "EditProfile": "Edit Profile",

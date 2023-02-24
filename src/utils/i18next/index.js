@@ -9,9 +9,11 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'ua',
+    whitelist: ['en', 'ua'],
+    debug: false,
     detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
+      order: ['localStorage', 'cookie'],
+      caches: ['localStorage', 'cookie'],
     },
     interpolation: {
       escapeValue: false,
@@ -20,5 +22,10 @@ i18n
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
   });
+
+i18n.addResourceBundle('en', 'translation', {});
+i18n.loadLanguages(['en', 'ua']);
+i18n.addResourceBundle('ua', 'translation', {});
+i18n.loadLanguages(['ua']);
 
 export default i18n;
