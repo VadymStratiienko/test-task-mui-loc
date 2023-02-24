@@ -34,6 +34,7 @@ const LoginPage: FC<IPropsLogin> = (props): JSX.Element => {
           value={username}
           onChange={handleUsernameChange}
           className={classes.textField}
+          required
         />
         <TextField
           id='password'
@@ -44,6 +45,7 @@ const LoginPage: FC<IPropsLogin> = (props): JSX.Element => {
           value={password}
           onChange={handlePasswordChange}
           className={classes.textField}
+          required
         />
         {!isValid && <div style={{ color: 'red' }}>{t('form.invalid')}</div>}
         <AppLoadingButton
