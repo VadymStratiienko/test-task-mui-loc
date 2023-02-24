@@ -47,6 +47,7 @@ const LoginPage: FC<IPropsLogin> = (props): JSX.Element => {
         />
         {!isValid && <div style={{ color: 'red' }}>{t('form.invalid')}</div>}
         <AppLoadingButton
+          sx={{position: "relative", right:0, left:0, top:0}}
           type='submit'
           loading={loading}
           variant='contained'
