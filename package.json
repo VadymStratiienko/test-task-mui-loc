@@ -2,7 +2,6 @@
   "name": "test-task-mui-loc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VadymStratiienko.github.io/test-task-mui-loc",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
