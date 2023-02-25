@@ -17,7 +17,6 @@ export interface IPostCard {
   title: string;
   body: string;
   handleDeletePost: (id: number) => void;
-  loading: boolean;
 }
 export interface IDeletePostPayload {
   id: number;

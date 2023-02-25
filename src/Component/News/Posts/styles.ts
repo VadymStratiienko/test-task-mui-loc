@@ -11,4 +11,11 @@ export const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
   },
+  iconDel: {
+    position: "relative",
+    right: 0,
+    "&:hover": {
+      color: 'red'
+    }
+  }
 });

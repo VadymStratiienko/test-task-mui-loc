@@ -16,7 +16,6 @@ export const useStyles = makeStyles(() => ({
     minWidth: 120,
     paddingRight: '20px',
   },
-  selectNat: {},
 }));
 
 export const drawerWidth = 240;

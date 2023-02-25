@@ -34,7 +34,6 @@ const NewsComponent: FC = (): JSX.Element => {
             id={id}
             title={title}
             body={body}
-            loading={isLoading}
             handleDeletePost={handleDeletePost}
           />
         );
