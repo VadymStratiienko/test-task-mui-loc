@@ -1,13 +1,9 @@
-import i18n, { Resource } from 'i18next';
+import i18n from 'i18next';
 import HttpApi from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import ua from '../../common/locales/ua/translation.json';
 import en from '../../common/locales/en/translation.json';
-
-interface I18nResources {
-  translation: Resource;
-}
 
 i18n
   .use(HttpApi)
@@ -22,7 +18,7 @@ i18n
       ua: {
         translation: ua,
       },
-    } as Record<string, I18nResources>,
+    },
     whitelist: ['en', 'ua'],
     debug: false,
     detection: {
@@ -36,5 +32,6 @@ i18n
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
   });
+
 
 export default i18n;
