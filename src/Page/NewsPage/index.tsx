@@ -1,14 +1,14 @@
 import React, { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../utils/hook';
 import { deleteNewsById } from '../../store/thunk/post';
-import { Box, Button, CircularProgress } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { useStyles } from './styles';
 import PostCard from '../../Component/Posts';
 import { loadMore } from '../../store/slice/post';
 import { useTranslation } from 'react-i18next';
 import LoadingProgress from "../../Component/loading-progress";
 
-const NewsComponent: FC = (): JSX.Element => {
+const NewsPage: FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const classes = useStyles();
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ const NewsComponent: FC = (): JSX.Element => {
           />
         );
       })}
-      {isLoading && <CircularProgress disableShrink className={classes.loadingStyle} />}
+      {isLoading && <LoadingProgress />}
       {error && <Box>{error}</Box>}
       <Button
         variant='contained'
@@ -54,4 +54,4 @@ const NewsComponent: FC = (): JSX.Element => {
   );
 };
 
-export default NewsComponent;
+export default NewsPage;

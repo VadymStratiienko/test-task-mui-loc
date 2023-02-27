@@ -3,9 +3,8 @@ import { Box } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "../../utils/hook";
 import { getProduct } from "../../store/thunk/products";
 import CardProduct from "../../Component/CardProduct";
-import { useStyles } from "./styles";
 import LoadingProgress from "../../Component/loading-progress";
-
+import { useStyles } from "./styles";
 
 const HomeComponent = () => {
   const dispatch = useAppDispatch();

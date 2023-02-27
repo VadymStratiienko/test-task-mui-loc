@@ -15,7 +15,10 @@
   "profile": {
     "EditProfile": "Edit Profile",
     "saveBtn": "SAVE CHANGES",
-    "changeBtn": "CHANGE AVATAR"
+    "changeBtn": "CHANGE AVATAR",
+    "newPassword" : "New Password",
+    "username": "Username",
+    "firstname": "First Name"
   },
   "post": {
     "add": "Add posts",

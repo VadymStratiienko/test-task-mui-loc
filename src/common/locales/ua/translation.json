@@ -15,7 +15,10 @@
   "profile": {
     "EditProfile": "Профіль користувача",
     "saveBtn": "ЗБЕРЕГТИ ЗМІНИ",
-    "changeBtn": "ЗМІНИТИ АВАТАР"
+    "changeBtn": "ЗМІНИТИ АВАТАР",
+    "newPassword": "Новий пароль",
+    "username": "Юзернейм",
+    "firstname": "Им'я"
   },
   "post": {
     "add": "Додати пости",
