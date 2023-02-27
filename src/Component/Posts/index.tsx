@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import { useStyles } from './styles';
-import { IPostCard } from '../../../common/types/post';
+import { IPostCard } from '../../common/types/post';
 
 const PostCard: FC<IPostCard> = (props) => {
   const { id, title, body, handleDeletePost} = props;

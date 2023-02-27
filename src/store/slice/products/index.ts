@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getProduct } from '../../thank/products';
+import { getProduct } from '../../thunk/products';
 import { IProduct, IProductState } from '../../../common/types/product';
 
 const initialState: IProductState = {
