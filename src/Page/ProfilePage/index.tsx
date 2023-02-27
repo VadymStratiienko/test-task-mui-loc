@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Avatar, Button, Grid, TextField, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { Avatar, Button, Grid, TextField, Typography } from '@mui/material';
 import '../../utils/i18next';
 
 const ProfilePage: React.FC = () => {

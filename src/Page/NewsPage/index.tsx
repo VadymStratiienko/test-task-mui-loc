@@ -1,12 +1,12 @@
 import React, { FC, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Box, Button } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../utils/hook';
 import { deleteNewsById } from '../../store/thunk/post';
-import { Box, Button } from '@mui/material';
-import { useStyles } from './styles';
-import PostCard from '../../Component/Posts';
 import { loadMore } from '../../store/slice/post';
-import { useTranslation } from 'react-i18next';
+import PostCard from '../../Component/Posts';
 import LoadingProgress from "../../Component/loading-progress";
+import { useStyles } from './styles';
 
 const NewsPage: FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
