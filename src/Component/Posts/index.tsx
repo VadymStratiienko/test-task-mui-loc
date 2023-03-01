@@ -5,12 +5,14 @@ import { IPostCard } from '../../common/types/post';
 import { useStyles } from './styles';
 
 const PostCard: FC<IPostCard> = (props) => {
-  const { id, title, body, handleDeletePost} = props;
+  const { id, title, body, handleDeletePost } = props;
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <ClearIcon className={classes.iconDel} color="primary"
+      <ClearIcon
+        className={classes.iconDel}
+        color='primary'
         onClick={() => handleDeletePost(id)}
       />
       <CardContent>

@@ -7,13 +7,11 @@ import NewsPage from './Page/NewsPage';
 import PrivateRoute from './utils/router/privateRouter';
 import ProfilePage from './Page/ProfilePage';
 import AuthComponent from './Page/Auth';
-import LoadingProgress from "./Component/loading-progress";
+import LoadingProgress from './Component/loading-progress';
 
 function App() {
   return (
-    <Suspense
-      fallback={<LoadingProgress />}
-    >
+    <Suspense fallback={<LoadingProgress />}>
       <CssBaseline />
       <Routes>
         <Route element={<Layout />}>

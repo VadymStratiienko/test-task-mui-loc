@@ -18,7 +18,4 @@ export const useStyles = makeStyles(() => ({
   textField: {
     margin: '10px',
   },
-  button: {
-    margin: '40px',
-  },
 }));
