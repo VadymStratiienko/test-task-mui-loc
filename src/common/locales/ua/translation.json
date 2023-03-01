@@ -18,7 +18,8 @@
     "changeBtn": "ЗМІНИТИ АВАТАР",
     "newPassword": "Новий пароль",
     "username": "Юзернейм",
-    "firstname": "Им'я"
+    "firstname": "Им'я",
+    "logout": "Вихід"
   },
   "post": {
     "add": "Додати пости",

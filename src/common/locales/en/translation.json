@@ -18,7 +18,8 @@
     "changeBtn": "CHANGE AVATAR",
     "newPassword" : "New Password",
     "username": "Username",
-    "firstname": "First Name"
+    "firstname": "First Name",
+    "logout": "Logout"
   },
   "post": {
     "add": "Add posts",
