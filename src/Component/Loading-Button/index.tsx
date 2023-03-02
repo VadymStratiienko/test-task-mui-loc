@@ -1,3 +1,4 @@
+import React from 'react';
 import { styled } from '@mui/styles';
 import LoadingButton from '@mui/lab/LoadingButton';
 
@@ -8,4 +9,4 @@ const AppLoadingButton = styled(LoadingButton)({
   maxWidth: 300,
 });
 
-export default AppLoadingButton;
+export default React.memo(AppLoadingButton);

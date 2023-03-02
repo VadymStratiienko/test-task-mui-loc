@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Box, TextField, Typography } from '@mui/material';
+import { Alert, Box, TextField, Typography } from '@mui/material';
 import { IPropsLogin } from '../../../common/types/auth';
 import { useStyles } from './styles';
-import AppLoadingButton from '../../../Component/loading-button';
+import AppLoadingButton from '../../../Component/Loading-Button';
 import { useTranslation } from 'react-i18next';
 import '../../../utils/i18next';
 
@@ -10,7 +10,7 @@ const LoginPage: FC<IPropsLogin> = (props): JSX.Element => {
   const { setUsername, setPassword, handleLogin, password, username, isValid, loading } = props;
   const classes = useStyles();
   const { t } = useTranslation();
-
+  console.log(isValid);
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
   };
@@ -47,7 +47,7 @@ const LoginPage: FC<IPropsLogin> = (props): JSX.Element => {
           className={classes.textField}
           required
         />
-        {!isValid && <div style={{ color: 'red' }}>{t('form.invalid')}</div>}
+        {!isValid && <Alert severity='error'>{t('form.invalid')}</Alert>}
         <AppLoadingButton
           sx={{ position: 'relative', right: 0, left: 0, top: 0 }}
           type='submit'

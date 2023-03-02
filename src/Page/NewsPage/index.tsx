@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../utils/hook';
 import { deleteNewsById } from '../../store/thunk/post';
 import { loadMore } from '../../store/slice/post';
 import PostCard from '../../Component/Posts';
-import LoadingProgress from '../../Component/loading-progress';
+import LoadingProgress from '../../Component/Loading-Progress';
 import { useStyles } from './styles';
 
 const NewsPage: FC = (): JSX.Element => {
