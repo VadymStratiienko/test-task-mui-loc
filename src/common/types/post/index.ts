@@ -3,6 +3,7 @@ export interface IPostState {
   isLoading: boolean;
   error: string | null;
   nextPage: number;
+  hasNextPage: boolean;
 }
 
 export interface IPost {

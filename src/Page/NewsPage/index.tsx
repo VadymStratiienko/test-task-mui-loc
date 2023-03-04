@@ -1,55 +1,68 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useCallback, useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../utils/hook';
 import { deleteNewsById } from '../../store/thunk/post';
 import { loadMore } from '../../store/slice/post';
 import PostCard from '../../Component/Posts';
 import LoadingProgress from '../../Component/Loading-Progress';
+import AppLoadingButton from "../../Component/Loading-Button";
+import { MAX_POSTS } from "../../utils/costants";
 import { useStyles } from './styles';
 
+
+
+
 const NewsPage: FC = (): JSX.Element => {
+  const [disabled, setDisabled] = useState(false);
   const dispatch = useAppDispatch();
   const classes = useStyles();
   const { t } = useTranslation();
-  const { data, isLoading, error } = useAppSelector((state) => state.post);
+  const { data, isLoading, error, hasNextPage } = useAppSelector((state) => state.post);
 
   useEffect(() => {
     dispatch(loadMore());
   }, []);
-  const handleLoadMore = () => {
-    dispatch(loadMore());
-  };
-  const handleDeletePost = (id: number) => {
-    dispatch(deleteNewsById(id));
-  };
 
-  return !data ? (
-    <>{isLoading && <LoadingProgress />}</>
-  ) : (
+  const handleLoadMore = useCallback(() => {
+    if (hasNextPage) {
+      dispatch(loadMore());
+    }
+    setDisabled(true);
+  }, [dispatch, hasNextPage]);
+
+  const handleDeletePost = useCallback((id: number) => {
+    dispatch(deleteNewsById(id));
+  }, [dispatch]);
+
+  useEffect(() => {
+    setDisabled(data.length >= MAX_POSTS);
+  }, [data]);
+  console.log(data.length);
+  return (
     <Box className={classes.wrapperNews}>
-      {data?.map(({ title, body, id }, index) => {
-        return (
-          <PostCard
-            key={index}
-            id={id}
-            title={title}
-            body={body}
-            handleDeletePost={handleDeletePost}
-          />
-        );
-      })}
+      {data && data.map(({ title, body, id }, index) => (
+        <PostCard
+          key={index}
+          id={id}
+          title={title}
+          body={body}
+          handleDeletePost={handleDeletePost}
+        />
+      ))}
       {isLoading && <LoadingProgress />}
       {error && <Box>{error}</Box>}
-      <Button
-        variant='contained'
-        color='primary'
-        sx={{ marginBottom: '50px', marginLeft: 'auto', marginRight: 'auto' }}
-        type='submit'
+      <AppLoadingButton
+        variant="contained"
+        color="primary"
+        sx={{ marginBottom: "50px", marginLeft: "auto", marginRight: "auto" }}
+        type="submit"
         onClick={handleLoadMore}
+        loading={isLoading}
+        disabled={disabled}
       >
-        {t('post.add')}
-      </Button>
+        {t("post.add")}
+      </AppLoadingButton>
     </Box>
   );
 };

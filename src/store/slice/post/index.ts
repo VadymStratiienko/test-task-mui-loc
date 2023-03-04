@@ -8,6 +8,7 @@ const initialState: IPostState = {
   isLoading: false,
   error: null,
   nextPage: 1,
+  hasNextPage: true,
 };
 
 const postsSlice = createSlice({
@@ -24,6 +25,7 @@ const postsSlice = createSlice({
         state.isLoading = false;
         state.data = state.data.concat(action.payload);
         state.nextPage = state.nextPage ? state.nextPage + 1 : 2;
+        state.hasNextPage = action.payload.length > 0;
       })
       .addCase(getNews.rejected, (state, action: PayloadAction<any>) => {
         state.isLoading = false;
@@ -38,15 +40,17 @@ const postsSlice = createSlice({
         state.data = state.data
           ? state.data.filter((post) => post.id !== action.payload)
           : state.data;
+        state.hasNextPage = true;
       })
       .addCase(deleteNewsById.rejected, (state, action: PayloadAction<any>) => {
         state.isLoading = false;
         state.error = action.payload;
-      });
+      })
+
   },
 });
 
-export const loadMore = (): AppThunk<void> => (dispatch, getState) => {
+export const loadMore = (): AppThunk => (dispatch, getState) => {
   const { nextPage } = getState().post;
   dispatch(getNews({ page: nextPage }));
 };
