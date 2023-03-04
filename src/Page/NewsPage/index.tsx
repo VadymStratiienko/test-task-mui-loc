@@ -38,7 +38,7 @@ const NewsPage: FC = (): JSX.Element => {
   useEffect(() => {
     setDisabled(data.length >= MAX_POSTS);
   }, [data]);
-  console.log(data.length);
+
   return (
     <Box className={classes.wrapperNews}>
       {data && data.map(({ title, body, id }, index) => (
